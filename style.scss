@@ -1,0 +1,88 @@
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  // padding: 16px;
+  height: 100vh;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.swiper-thumbnail {
+  margin-bottom: 16px;
+  width: 600px;
+  height: 60px;
+
+
+  .swiper-slide {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: lightseagreen;
+    color: white;
+    font-weight: bold;
+  }
+
+  .swiper-slide-thumb-active {
+    background-color: lightgreen;
+  }
+}
+
+.swiper-main {
+  width: 600px;
+  height: 300px;
+
+  .wiper-slide--main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    // padding: 16px;
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+
+    // 偶数の時は、背景色を変える
+    &:nth-child(even) {
+      background-color: lightpink;
+    }
+  }
+
+
+}
+
+.swiper-pagination-bullet {
+  /* width: 200px; */
+}
+
+.swiper-inner {
+  width: 480px;
+  height: 100px;
+
+  .swiper-slide {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    // box-sizing: content-box;
+    // padding: 16px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .swiper-slide {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    // border-radius: 9999px;
+    background-color: lightseagreen;
+    color: white;
+    font-weight: bold;
+  }
+
+
+}
