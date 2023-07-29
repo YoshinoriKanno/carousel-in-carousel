@@ -1,4 +1,4 @@
-# carousel-in-carousel
+# swiper-carousel-in-carousel
 
 ## 動作について
 
