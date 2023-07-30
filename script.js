@@ -74,8 +74,8 @@ const swiperInner = new Swiper('.swiper-inner', {
     768: {
       slidesPerView: 5,
       navigation: {
-        nextEl: '.swiper-button-next--nav',
-        prevEl: '.swiper-button-prev--nav',
+        nextEl: '.swiper-button-next--inner',
+        prevEl: '.swiper-button-prev--inner',
       },
     }
   }

@@ -44,6 +44,10 @@ body {
 .swiper-nav .swiper-slide-thumb-active {
   background-color: lightgreen;
 }
+.swiper-nav .swiper-button-prev.swiper-button-disabled,
+.swiper-nav .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
 
 .swiper-main {
   height: 300px;
