@@ -58,7 +58,7 @@ const swiperMain = new Swiper('.swiper-main', {
 }
 
 const swiperInner = new Swiper('.swiper-inner', {
-  slidesPerView: 5,
+  slidesPerView: 2,
   loop: true,
   spaceBetween: 8,
   autoplay: {
@@ -70,4 +70,13 @@ const swiperInner = new Swiper('.swiper-inner', {
     nextEl: '.swiper-button-next--inner',
     prevEl: '.swiper-button-prev--inner',
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+      navigation: {
+        nextEl: '.swiper-button-next--nav',
+        prevEl: '.swiper-button-prev--nav',
+      },
+    }
+  }
 });

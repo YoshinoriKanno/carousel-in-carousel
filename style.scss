@@ -10,11 +10,19 @@ body {
 }
 
 .container {
-  max-width: 480px;
+  max-width: 320px;
   width: 100%;
 
-  @media (768px < width) {
-    max-width: 640px;
+  @media (375px <=width) {
+    max-width: 375px;
+  }
+
+  @media (425px <=width) {
+    max-width: 425px;
+  }
+
+  @media (768px <=width) {
+    max-width: 768px;
   }
 }
 
