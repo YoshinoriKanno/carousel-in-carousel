@@ -77,5 +77,7 @@ swiperMain.on('slideChange', function () {
       swiperInner.slideTo(0)
     }
   }, 300);
+  // swiperNav のスライドを swiperMain のスライドに合わせる
+  swiperNav.slideTo(swiperMain.realIndex)
 })
 
