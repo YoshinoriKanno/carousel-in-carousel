@@ -36,10 +36,19 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: auto;
   border-radius: 9999px;
   background-color: lightseagreen;
   color: white;
   font-weight: bold;
+}
+@media (768px <= width) {
+  .swiper-nav .swiper-slide {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
 }
 .swiper-nav .swiper-slide-thumb-active {
   background-color: lightgreen;
@@ -84,4 +93,8 @@ body {
   background-color: lightseagreen;
   color: white;
   font-weight: bold;
+}
+.swiper-inner .swiper-button-prev.swiper-button-disabled,
+.swiper-inner .swiper-button-next.swiper-button-disabled {
+  display: none;
 }

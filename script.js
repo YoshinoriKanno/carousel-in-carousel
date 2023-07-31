@@ -3,18 +3,12 @@ const setNavVisibility = () => {
     // device width が 768px 未満の場合、.swiper-button-prev--nav と .swiper-button-next--nav を非表示にする
     const swiperButtonPrevNav = document.querySelector('.swiper-button-prev--nav')
     const swiperButtonNextNav = document.querySelector('.swiper-button-next--nav')
-    const swiperButtonPrevMain = document.querySelector('.swiper-button-prev--main')
-    const swiperButtonNextMain = document.querySelector('.swiper-button-next--main')
     if (window.innerWidth < 768) {
       swiperButtonPrevNav?.classList.add('swiper-button-hidden')
       swiperButtonNextNav?.classList.add('swiper-button-hidden')
-      swiperButtonPrevMain?.classList.add('swiper-button-hidden')
-      swiperButtonNextMain?.classList.add('swiper-button-hidden')
     } else {
       swiperButtonPrevNav?.classList.remove('swiper-button-hidden')
       swiperButtonNextNav?.classList.remove('swiper-button-hidden')
-      swiperButtonPrevMain?.classList.remove('swiper-button-hidden')
-      swiperButtonNextMain?.classList.remove('swiper-button-hidden')
     }
   }
 }
@@ -22,14 +16,12 @@ window.addEventListener('load', setNavVisibility);
 window.addEventListener('resize', setNavVisibility);
 
 const swiperNav = new Swiper('.swiper-nav', {
-  slidesPerView: 3.5,
-  freeMode: true,
+  slidesPerView: "auto",
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
   spaceBetween: 16,
   breakpoints: {
     768: {
-      slidesPerView: 5,
       navigation: {
         nextEl: '.swiper-button-next--nav',
         prevEl: '.swiper-button-prev--nav',
@@ -55,7 +47,6 @@ const swiperNav = new Swiper('.swiper-nav', {
 
 const swiperInner = new Swiper('.swiper-inner', {
   slidesPerView: 2,
-  loop: true,
   spaceBetween: 8,
   autoplay: {
     delay: 2500,
@@ -75,19 +66,9 @@ const swiperInner = new Swiper('.swiper-inner', {
 
 const swiperMain = new Swiper('.swiper-main', {
   loop: true,
-  // Navigation arrows
   thumbs: {
     swiper: swiperNav
   },
-  breakpoints: {
-    768: {
-      navigation: {
-        nextEl: '.swiper-button-next--main',
-        prevEl: '.swiper-button-prev--main',
-      },
-        }
-  }
-
 });
 
 swiperMain.on('slideChange', function () {
