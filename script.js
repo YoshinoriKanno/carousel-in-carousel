@@ -48,10 +48,6 @@ const swiperNav = new Swiper('.swiper-nav', {
 const swiperInner = new Swiper('.swiper-inner', {
   slidesPerView: 2,
   spaceBetween: 8,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
   navigation: {
     nextEl: '.swiper-button-next--inner',
     prevEl: '.swiper-button-prev--inner',
